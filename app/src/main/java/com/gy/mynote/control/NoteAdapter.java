@@ -1,8 +1,8 @@
-package com.gy.mynote.Control;
+package com.gy.mynote.control;
 
 import java.util.ArrayList;
 
-import com.gy.mynote.Bean.Notepad;
+import com.gy.mynote.bean.Notepad;
 import com.gy.mynote.R;
 
 
@@ -13,35 +13,31 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 
-public class MyAdapter extends BaseAdapter{
+public class NoteAdapter extends BaseAdapter{
 
 	LayoutInflater inflater;
 	ArrayList<Notepad> array;
-	 public MyAdapter(LayoutInflater inf,ArrayList<Notepad> arry){
+	 public NoteAdapter(LayoutInflater inf, ArrayList<Notepad> arry){
 		this.inflater=inf;
 		this.array=arry;
 	}
 	@Override
 	public int getCount() {
-		// TODO Auto-generated method stub
 		return array.size();
 	}
 
 	@Override
 	public Object getItem(int position) {
-		// TODO Auto-generated method stub
 		return array.get(position);
 	}
 
 	@Override
 	public long getItemId(int position) {
-		// TODO Auto-generated method stub
 		return position;
 	}
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		// TODO Auto-generated method stub
 		ViewHolder vh;
 		if(convertView==null){
 			vh=new ViewHolder();

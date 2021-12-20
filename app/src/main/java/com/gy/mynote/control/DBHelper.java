@@ -1,21 +1,21 @@
-package com.gy.mynote.Control;
+package com.gy.mynote.control;
 
 import java.util.ArrayList;
 
-import com.gy.mynote.Bean.Notepad;
+import com.gy.mynote.bean.Notepad;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-public class MyDB_operate {
+public class DBHelper {
 	Context context;
-	MyDB mydb;
+	NoteDB mydb;
 	SQLiteDatabase myDatabase;
 
-	public MyDB_operate(Context context){
+	public DBHelper(Context context){
 		this.context=context;
-		mydb=new MyDB(context);
+		mydb=new NoteDB(context);
 	}
 
 	public ArrayList<Notepad> getArray(){

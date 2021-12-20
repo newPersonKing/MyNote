@@ -1,18 +1,18 @@
-package com.gy.mynote.Bean;
+package com.gy.mynote.bean;
 
-	public class Notepad {
-		private String title;
-		private int id;
-		private String content;
-		private String time;
-		
+public class Notepad {
+	private String title;
+	private int id;
+	private String content;
+	private String time;
+
 	public Notepad(String title,int id,String content ,String time){
 		this.id=id;
 		this.title=title;
 		this.content=content;
 		this.time=time;
 	}
-	
+
 	public Notepad(String title,String content,String time){
 		this.title=title;
 		this.content=content;
@@ -39,5 +39,5 @@ package com.gy.mynote.Bean;
 	public String getTimes() {
 		return time;
 	}
- 
-	}
+
+}
